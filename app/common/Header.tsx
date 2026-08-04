@@ -7,7 +7,7 @@ import { FaRegUser } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center p-4 bg-white sticky">
+    <div className="sticky top-0 z-50 flex justify-between items-center p-4 bg-white">
       <div className="text-2xl border w-10 h-8.5 flex justify-center items-center rounded-xl border-[#e5e7eb]">
         <div className="text-gray-600">
           <CiMenuBurger />

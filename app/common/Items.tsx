@@ -10,7 +10,7 @@ import { HiUsers } from "react-icons/hi2";
 
 const Items = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 p-2">
+    <div className="flex flex-col justify-center items-center gap-4 p-2 pt-20">
       <div className="flex flex-col p-4 w-85.75  bg-white h-40 border gap-2 border-[#e5e7eb] rounded-[5px]">
         <div className=" border flex justify-center items-center w-10 h-10 p-6 rounded-full  border-green-500 bg-green-500">
           <i className="text-2xl text-white  ">

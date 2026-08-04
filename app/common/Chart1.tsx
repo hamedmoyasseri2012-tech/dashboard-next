@@ -8,27 +8,34 @@ const Chart1 = () => {
   const [state, setState] = useState({
     series: [
       {
-        name: "Solar",
-        data: [42, 48, 51, 39, 55, 60, 58, 44, 50, 63, 66, 59, 52, 57],
+        name: "",
+        data: [12, 7, 15, 30, 25, 67, 79, 68, 82, 92, 74, 60],
       },
       {
-        name: "Wind",
-        data: [0, 20, 40, 60, 80, 100],
+        name: "",
+        data: [0, 18, 35, 43, 34, 52, 64, 49, 63, 74, 59, 73],
       },
     ],
     options: {
       chart: {
         height: 350,
         type: "area",
+        toolbar: {
+          show: false,
+        },
       },
+
+      colors: ["#16baef", "#556ae9"],
+      legend: { show: false },
       dataLabels: {
         enabled: false,
       },
       stroke: {
         curve: "smooth",
+        width: 2,
       },
       title: {
-        text: "Renewable Energy Generation",
+        text: "",
         align: "left",
       },
       xaxis: {
@@ -46,8 +53,6 @@ const Chart1 = () => {
           "2025-10-10",
           "2025-11-11",
           "2025-12-12",
-          "2025-06-13",
-          "2025-06-14",
         ],
       },
       yaxis: {
@@ -67,8 +72,8 @@ const Chart1 = () => {
 
   return (
     <div>
-      <div className="flex flex-col  ml-4 border-[#e5e7eb] bg-white  border w-85.75 h-150 rounded-xl">
-        <div className="flex flex-col justify-start items-start gap-3 p-4  ">
+      <div className="flex flex-col  ml-4 border-[#e5e7eb] bg-white border w-85.75 h-165 rounded-xl">
+        <div className="flex flex-col justify-center items-center gap-3 p-4  ">
           <div className="p-4 text-[22px] font-medium flex flex-col gap-3">
             <h1>Payments Overview</h1>
             <div>
@@ -89,6 +94,19 @@ const Chart1 = () => {
                 height={350}
               />
             </div>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-[#6b7280] font-medium text-[16px]">
+              Received Amount
+            </h1>
+            <p className="text-[20px] font-medium">$580.00</p>
+          </div>
+          <div className="border-b w-70 mx-4"></div>
+          <div>
+            <h1 className="text-[#6b7280] font-medium text-[16px]">
+              Due Amount
+            </h1>
+            <p className="text-[20px] font-medium">$628.00</p>
           </div>
         </div>
       </div>
