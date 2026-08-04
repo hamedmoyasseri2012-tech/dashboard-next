@@ -1,7 +1,3 @@
-
-
-import React from "react";
-
 const Map = () => {
   return (
     <div className="flex flex-col p-4 ml-4 mt-4 gap-8 bg-white border  border-[#E5E7EB] rounded-2xl w-86 h-128 relative ">

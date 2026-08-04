@@ -4,11 +4,19 @@ import { FaRegMoon } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
+import { Dispatch, SetStateAction } from "react";
 
-const Header = () => {
+type HeaderProps = {
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+};
+const Header = ({ show, setShow }: HeaderProps) => {
   return (
     <div className="sticky top-0 z-50 flex justify-between items-center p-4 bg-white">
-      <div className="text-2xl border w-10 h-8.5 flex justify-center items-center rounded-xl border-[#e5e7eb]">
+      <div
+        onClick={() => setShow(!show)}
+        className="text-2xl border w-10 h-8.5 flex justify-center items-center rounded-xl border-[#e5e7eb]"
+      >
         <div className="text-gray-600">
           <CiMenuBurger />
         </div>
