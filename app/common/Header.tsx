@@ -1,3 +1,5 @@
+"use client"
+
 import { CiMenuBurger } from "react-icons/ci";
 import { IoSunnyOutline } from "react-icons/io5";
 import { FaRegMoon } from "react-icons/fa";

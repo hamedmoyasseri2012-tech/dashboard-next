@@ -1,3 +1,4 @@
+"use client"
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdArrowUp } from "react-icons/io";
 import { BiDollarCircle } from "react-icons/bi";

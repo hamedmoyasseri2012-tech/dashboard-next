@@ -1,3 +1,4 @@
+"use client"
 import { HiDotsHorizontal } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import { VscTwitter } from "react-icons/vsc";
