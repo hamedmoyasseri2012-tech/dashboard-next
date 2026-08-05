@@ -9,11 +9,11 @@ export default function ClientLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="flex">
-      <Sidebar show={show} />
+      <Sidebar show={show} onClose={() => setShow(false)} />
 
       <div className="flex-1">
         <Header show={show} setShow={setShow} />
