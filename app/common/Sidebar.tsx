@@ -7,6 +7,9 @@ import Task from "../Pages/Task";
 import Forms from "../Pages/Forms";
 import Tables from "../Pages/Tables";
 import Pages from "../Pages/Pages";
+import Charts from "../Pages/Charts";
+import UiElements from "../Pages/Ui Elements";
+import Others from "../Pages/Others";
 
 type SidebarProps = {
   show: boolean;
@@ -133,7 +136,7 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
           <div className="flex flex-col gap-6">
             <div className="flex justify-between items-center">
               <div className="flex gap-1">
-                <div className="text-[#4b5563]">
+                <div className="text-[#4b5563] ml-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -168,7 +171,7 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ml-6">
               <div className="flex gap-1">
                 <div className="text-[#4b5563]">
                   <svg
@@ -197,7 +200,7 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ml-6">
               <div className="flex gap-1">
                 <div className="text-[#4b5563]">
                   <svg
@@ -227,6 +230,12 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
                 </p>
               </div>
             </div>
+          </div>
+          <h1 className="text-[14px] text-[#4b5563] font-medium">OTHERS</h1>
+          <div>
+            <Charts />
+            <UiElements />
+            <Others />
           </div>
         </div>
       </aside>
