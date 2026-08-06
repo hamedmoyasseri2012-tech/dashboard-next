@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Dashboard from "./Dashboard";
 import Link from "next/link";
-import Task from "../Pages/Task";
-import Forms from "../Pages/Forms";
-import Tables from "../Pages/Tables";
-import Pages from "../Pages/Pages";
-import Charts from "../Pages/Charts";
-import UiElements from "../Pages/Ui Elements";
-import Others from "../Pages/Others";
+import Task from "../(Pages)/Task";
+import Forms from "../(Pages)/Forms";
+import Tables from "../(Pages)/Tables";
+import Pages from "../(Pages)/Pages";
+import Charts from "../(Pages)/Charts";
+import UiElements from "../(Pages)/Ui Elements";
+import Others from "../(Pages)/Others";
 
 type SidebarProps = {
   show: boolean;
@@ -20,12 +20,15 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
   return (
     <div className="flex flex-col ">
       <aside
-        className={`fixed left-0 top-0 h-screen w-72 z-100 p-6 gap-3 flex flex-col bg-white transition-transform duration-300 overflow-y-auto ${
+        className={`fixed left-0 top-0 h-screen w-72 z-100 p-6 gap-3 flex flex-col bg-white transition-transform duration-300 overflow-scroll ${
           show ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center">
-          <Image src="/logo.svg" alt="logo" width={174} height={32} />
+          <Link href="/">
+            <Image src="/logo.svg" alt="logo" width={174} height={32} />
+          </Link>
+
           <svg
             onClick={onClose}
             width="18"
@@ -42,7 +45,7 @@ const Sidebar = ({ show, onClose }: SidebarProps) => {
             ></path>
           </svg>
         </div>
-        <Dashboard />
+        <Dashboard onClose={onClose} />
         <div className="flex flex-col gap-6">
           <Link href="/" className="flex gap-2 ml-8 ">
             <div className="text-[16px] text-[#4b5563]">

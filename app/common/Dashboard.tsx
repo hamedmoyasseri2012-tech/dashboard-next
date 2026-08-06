@@ -1,9 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const Dashboard = () => {
+const Dashboard = ({ onClose }: { onClose: () => void }) => {
   const [show, setShow] = useState(true);
+  const router = useRouter();
 
   return (
     <div className="flex flex-col gap-2 ml-6 mr-6 mt-6">
@@ -63,10 +65,16 @@ const Dashboard = () => {
           show ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-col justify-end items-end gap-4 mt-2">
-          <label className="bg-[#f3f3fd] p-2 border rounded-[5px] border-[#f3f3fd] w-40 text-start text-[#5750f1] font-medium text-[16px]">
+        <div className="flex flex-col justify-end items-end gap-4 pt-2">
+          <button
+            onClick={() => {
+              onClose();
+              router.push("/");
+            }}
+            className="bg-[#f3f3fd] p-2 border rounded-[5px] border-[#f3f3fd] w-40 text-start text-[#5750f1] font-medium text-[16px]"
+          >
             eCommerce
-          </label>
+          </button>
 
           <ul className="flex flex-col w-40 gap-6">
             <li className="flex justify-between items-center">

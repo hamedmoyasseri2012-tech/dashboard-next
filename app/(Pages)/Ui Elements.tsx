@@ -4,7 +4,7 @@ const UIElements = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="flex flex-col gap-2 ml-5 mr-6 ">
+    <div className="flex flex-col gap-2 pl-5 pr-6  ">
       <div
         onClick={() => setShow(!show)}
         className="flex justify-between items-center  p-2  rounded-[5px] border-[#f3f3fd] cursor-pointer"
@@ -55,7 +55,7 @@ const UIElements = () => {
 
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          show ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          show ? " opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="flex flex-col justify-end items-end gap-4 ">
