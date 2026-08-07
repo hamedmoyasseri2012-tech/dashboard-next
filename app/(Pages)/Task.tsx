@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const Task = () => {
@@ -62,7 +63,9 @@ const Task = () => {
         <div className="flex flex-col justify-end items-end gap-4 ">
           <ul className="flex flex-col w-40 gap-4">
             <li className="flex justify-between items-center">
-              <p className="text-[#4b5563] font-medium">List</p>
+              <Link href="/List" className="text-[#4b5563] font-medium">
+                List
+              </Link>
               <p className="rounded bg-[#5750f1] px-2 py-1 text-xs font-medium text-white">
                 Pro
               </p>
